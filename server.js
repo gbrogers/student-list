@@ -29,12 +29,12 @@ app.post("/api/student", (req, res) => {
   const index = studentList.findIndex((studentName) => {
     return studentName === name;
   });
-  const name = "Giselle";
+  const fname = "Giselle";
   if (index === -1 && name !== "") {
     studentList.push(name);
     // add rollbar log here
     rollbar.log("student added successfully", {
-      author: `${name}`,
+      author: `${fname}`,
       type: "manual",
     });
 
